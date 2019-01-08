@@ -36,14 +36,19 @@ Demonstrate your understanding of today's concepts by answering the following fr
 Follow these steps to set up your project:
 
 - Create a new Single View application. Clean up the boilerplate in the application delegate and custom View Controller class.
-- Add a new Model.swift file to your project with the following contents:
+- Add a new Item.swift file to your project with the following contents:
 
 ```
-class Model {
-    static let shared = Model()
-    private init() {}
-    
-    private(set) var items: [String] = []
+struct Item {
+   var name: String
+}
+```
+
+- Create a model controller by creating a new file, ItemsController.swift:
+
+```
+class ItemsController {
+    var items: [String] = []
 }
 ```
 
